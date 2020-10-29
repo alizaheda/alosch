@@ -1,0 +1,28 @@
+import turtle
+import random
+Lisa = turtle.Turtle()
+Lisa.pensize(2)
+turtle.Screen().bgcolor("grey")
+colours = ["cyan", "purple", "white", "blue"]
+
+Lisa.penup()
+Lisa.forward(90)
+Lisa.left(45)
+Lisa.pendown()
+
+def branch():
+    for i in range(3):
+        for i in range(3):
+             Lisa.forward(30)
+             Lisa.backward(30)
+             Lisa.right(45)
+        Lisa.left(90)
+        Lisa.backward(30)
+        Lisa.left(45)
+    Lisa.right(90)
+    Lisa.forward(90)
+            
+for i in range(8):
+    branch()
+    Lisa.left(45)
+Lisa.color(random.choice(colours))  
